@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/CSS.min.css">
+    <link rel="icon" type="image/icon" href="./img/favicon.png">
+    <title>Progetto HTML+css</title>
+</head>
+<body>
+    <header>
+
+        <!-- hamburger menu con 4 voci a comparsa -->
+
+        <label class="hamburger">
+            <input type="checkbox">
+        </label>
+        <aside class="sidebar">
+            <nav>
+                <div class="Homepage"><a href="./index.html">Homepage</a></div>
+                <div class="Progetti"><a href="./2Progetti.html">Progetti</a></div>
+                <div class="Progetto-page"><a href="./3Progetto-HTML+css.html">Progetto HTML+css</a></div>
+                <div class="Contattami"><a href="./4Contattami.html">Contattami</a></div>
+            </nav>
+        </aside>
+        <div class="logo">
+            <a href="./1Home.html">
+                <img src="./img/graficanuova.png" alt="logo">
+            </a>
+        </div>
+    </header>
+    <main>
+
+        <!-- descrizione sequenziale del progetto html+css -->
+
+        <!-- ogni step è racchiuso in un box -->
+
+        <h1>Progetto HTML/css</h1>
+        <div class="cornice">
+            <div class="immagine">
+                <img src="./img/cristal1.png" alt="cristal1">
+            </div>
+            <div class="testo">
+                <div class="descrizione">
+                    <h2>Step 1</h2>
+                    <p>
+                        Per cominciare ho creato una divisione con spessore 80px che racchiudesse
+                        all'interno l'header, e ho allineato rispettivamente a destra logo e nome (o eventuale insegna).
+                        A sinistra invece ho racchiuso una lista non ordinata che contenesse le varie voci del menù, per poi allinearla
+                        nella seconda metà del foglio di lavoro in questione. Infine ho aggiunto un immagine png di 15px con l'icona del
+                        telefono per rendere la voce contatti più intuitiva.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="cornice">
+            <div class="immagine">
+                <img src="./img/cristal2.png" alt="cristal2">
+            </div>
+            <div class="testo">
+                <div class="descrizione">
+                    <h2>Step 2</h2>
+                    <p>
+                        Per separare e distinguere correttamente le due voci,
+                        dare una parvenza di distanza in maniera precisa e netta, ho assegnato il 50% di lunghezza
+                        al logo e al menù, in modo che al restringersi della pagina a seconda del dispositivo
+                        (versione desktop per pc), le dimensioni possano essere quanto più responsive possibili.
+                        Inoltre (spoiler) ho cambiato colore nel momento in cui il cursore passa sulle voci del menù,
+                        si osserva meglio nel prossimo step.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="cornice">
+            <div class="immagine">
+                <img src="./img/cristal-hover.png" alt="cristal3">
+            </div>
+            <div class="testo">
+                <div class="descrizione">
+                    <h2>Step 3</h2>
+                    <p>
+                        Questo è lo step delle pseudo classi. In sostanza ho integrato delle funzioni interattive
+                        che permettono di visualizzare il menù in modo ancora più specifico e funzionale; come potete osservare dall'immagine
+                        infatti, il contorno delle voci cambia colore quando il cursore passa sopra.
+                        Ma non finisce qua, infatti nella voce servizi, il menù sviluppa automaticamente un sottomenù che permette di cliccare
+                        delle sottocategorie, figlie della categoria principale. Una scorciatoia che aiuta
+                        la fruizione del sito e permette di inserire più informazioni in meno spazio! Bello no?
+                    </p>
+                </div>
+            </div>
+        </div>
+        <p><a href="./index.html">Torna alla Homepage</a></p>
+    </main>
+
+    
+    <!-- fine main e inizio footer con cta a social e policies -->
+
+    <footer>
+        <address class="social">
+            <p>Seguimi sui social:</p>
+            <a href="https://linkedin.com/in/carlo-elia-durso/">
+                <img src="./img/linkedin.png" alt="LinkedIn">
+            </a>
+            <a href="https://facebook.com/elia.durso.1">
+                <img src="./img/facebook.png" alt="facebook">
+            </a>
+            <a href="https://instagram.com/pischelletto_durso">
+                <img src="./img/instagram.png" alt="Instagram">
+            </a>
+        </address>
+        <div class="copyright">
+            <p>© Carlo D'Urso, all rights reserved</p>
+            <ul class="termini">
+                <li class="privacy"><a href="#">Privacy policy</a></li>
+                <li class="terms"><a href="#">Termini e condizioni</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

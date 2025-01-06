@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/CSS.min.css">
+    <link rel="icon" type="image/icon" href="./img/favicon.png">
+    <title>Home</title>
+</head>
+<body>
+    <header>
+
+        <!-- L'intenzione è quella di creare un hamburger menù a comparsa con 4 voci -->
+
+        
+        <div class="menu">
+            <label class="hamburger"> 
+                <input type="checkbox">
+            </label>
+            
+            <!-- voci del menu -->
+            
+            <aside class="sidebar">
+                <nav>
+                    <div class="Homepage"><a href="./index.html">Homepage</a></div>
+                    <div class="Progetti"><a href="./2Progetti.html">Progetti</a></div>
+                    <div class="Progetto-page"><a href="./3Progetto-HTML+css.html">Progetto HTML+css</a></div>
+                    <div class="Contattami"><a href="./4Contattami.html">Contattami</a></div>
+                </nav>
+            </aside>
+        </div>
+        <div class="logo">
+             <a href="./index.html">
+                <img src="./img/graficanuova.png" alt="logo">
+             </a>
+        </div>
+            <!-- logo centrale -->
+            
+    </header>
+
+    <!-- fine header -->
+
+    <main>
+
+        <!-- l'intenzione è creare più box costituiti da contenuti di tipo foto -->
+
+        <!-- foto profilo e frase introduttiva -->
+
+        <section class="me">
+            <img src="./img/profilo.png" alt="profilo">
+            <cite>Web developer in evoluzione, music lover per passione</cite>
+        </section>
+
+        <!-- sezione principale -->
+
+        <section class="chisono">
+            <div class="web-development">
+                <img src="./img/web-development.png" alt="web-development">
+            </div>
+            <div class="chisono-text">
+                <h1>Chi sono</h1>
+                <p class="chisono">
+                    Sono un aspirante sviluppatore web con una passione per il design ed il codice. Attualmente sto perfezionando le mie competenze in HTML e CSS per creare siti funzionali alle richieste da parte dei clienti.
+                    Mi appassionano molto la musica ed il viaggio, i quali tirano fuori da me continui stimoli e nuovi lati creativi. <br>
+                    
+                    Le mie competenze attuali sono:
+                </p>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>UX design</li>
+                </ul>
+                <div>
+                    <p>
+                        <a href="./2Progetti.html">Sfoglia i progetti</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- una breve introduzione al mio background e gli hobby -->
+
+        <section class="descrizione">
+            <div class="testo-descrizione">
+                <h2>Ogni storia parte dall'inizio</h2>
+                <p>
+                    Nato a Messina nel 1999, all'età di 5 anni
+                    mi sono trasferito a Brescia con i miei genitori in cerca di un futuro fatto di maggiori opportunità. <br>
+                    Una volta finito il mio percorso di studi, mi sono interfacciato
+                    al mondo del lavoro, nello specifico nel settore della vendita
+                assistita di sneakers e abbigliamento sportivo (lo stile che piace a me)
+                e successivamente ho deciso di concentrarmi su settori digitali, con cui
+                di base sono cresciuto (sono sempre stato attratto ai vari tricks & tips del mondo digitale). <br>
+                Da qui nasce l'idea d'intraprendere un nuovo percorso con l'auspicio e la volontà di
+                crescere professionalmente e d'implementare e migliorare continuamente le mie skills.
+                </p>
+                <div>
+                    <p>
+                        <a href="./4Contattami.html">Facciamo due chiacchiere</a>
+                    </p>
+                </div>
+            </div>
+            <div class="foto-tenerife">
+                <img src="./img/tenerife.jpg" alt="tenerife">
+            </div>
+        </section>
+
+        <!-- form per contattarmi -->
+
+        <section class="form">
+            <div class="maps">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5588.251028973582!2d10.201834376808439!3d45.54780057107539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47817658d806214d%3A0x76a0614b532d949b!2sVia%20Baldassare%20Zamboni%2C%2097%2C%2025126%20Brescia%20BS!5e0!3m2!1sit!2sit!4v1732193679292!5m2!1sit!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="caffe">
+                <h2>Contattami</h2>
+                <h4>Prendiamoci un caffè</h4>
+                <p class="caffe">
+                    Ogni grande collaborazione inizia da una semplice chiacchierata!
+                    Compila il modulo, sarò felice di ascoltarti.                    
+                </p>
+                <p class="caffe">
+                    (tutti i campi * sono obbligatori)
+                </p>
+                <form action="#" method="get">
+                    <label for="nome" class="name">Nome*</label>
+                    <input type="text" name="nome" id="nome" placeholder="Nome" required>
+                    <label for="cognome" class="cognome">Cognome*
+                        <input type="text" name="cognome" id="cognome" placeholder="Cognome" required>
+                    </label>
+                    <label for="email" class="email">E-mail*
+                        <input type="email" name="email" id="email" placeholder="E-mail" required>
+                    </label>
+                    <label for="phone" class="phone">Telefono
+                        <input type="text" name="phone" id="phone" placeholder="Telefono">
+                    </label>
+                    <label for="argomento" class="argomento">Seleziona un argomento*
+                        <select name="argomento" id="argomento" class="argomento" required>
+                            <option value="" class="selected" selected>Seleziona un argomento</option>
+                            <option value="assistenza" class="assistenza">Assistenza</option>
+                            <option value="collaborazione" class="collaborazione">Collaborazione</option>
+                            <option value="colloquio" class="colloquio">Colloquio</option>
+                            <option value="info" class="info">Richiesta Informazioni</option>
+                        </select>
+                    </label>
+                    <label for="testo" class="testo">Scrivi qui:*
+                    <textarea name="testo" id="testo" class="testo" placeholder="Lorem ipsum" required></textarea>
+                    </label>
+                    <input type="submit" class="submit" value="Invia">
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- fine main e inizio footer con cta a social e policies -->
+
+    <footer>
+        <address class="social">
+            <p>Seguimi sui social:</p>
+            <a href="https://linkedin.com/in/carlo-elia-durso/" target="_blank">
+                <img src="./img/linkedin.png" alt="LinkedIn">
+            </a>
+            <a href="https://facebook.com/elia.durso.1" target="_blank">
+                <img src="./img/facebook.png" alt="facebook">
+            </a>
+            <a href="https://instagram.com/pischelletto_durso" target="_blank">
+                <img src="./img/instagram.png" alt="Instagram">
+            </a>
+        </address>
+        <div class="copyright">
+            <p>© Carlo D'Urso, all rights reserved</p>
+            <ul class="termini">
+                <li class="privacy"><a href="#">Privacy policy</a></li>
+                <li class="terms"><a href="#">Termini e condizioni</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

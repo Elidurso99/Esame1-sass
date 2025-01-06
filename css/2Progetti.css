@@ -1,0 +1,513 @@
+@font-face {
+    font-family: nunito;
+    src: url(../font/Nunito.ttf);
+}
+
+* {
+    font-family: nunito;
+}
+
+body {
+    margin: 0;
+    background-color: rgb(254, 243, 226, 0.6) ;
+}
+
+:root {
+    --bar-width: 50px;
+    --bar-height: 8px;
+    --hamburger-gap: 6px;
+    --foreground: #ff7429;
+    --background: white;
+    --hamburger-margin: 10px;
+    --animation-timing: 200ms ease-in-out;
+}
+
+/* fine regole generali */
+
+/* inizio header */
+
+/* hamburger menu */
+
+label.hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: var(--hamburger-gap);
+    margin: var(--hamburger-margin);
+    width: max-content;
+    z-index: 2;
+    cursor: pointer;
+}
+
+label.hamburger:has(input:checked) {
+    --background: rgba(255, 255, 255, 0.9);
+    --foreground: #ff7429;
+}
+
+label.hamburger::before,
+label.hamburger::after {
+    content:""
+}
+
+label.hamburger::before,
+label.hamburger::after,
+label.hamburger input {
+    width: var(--bar-width);
+    height: var(--bar-height);
+    background-color: var(--foreground);
+    border-radius: 5px;
+    transition: opacity var(--animation-timing), 
+    width var(--animation-timing), 
+    rotate var(--animation-timing),
+    translate var(--animation-timing);
+    transform-origin: left center;
+}
+
+label.hamburger input {
+    appearance: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    pointer-events: none;
+}
+
+label.hamburger:has(input:checked)::before {
+    rotate: 45deg;
+    width: 40px;
+}
+
+label.hamburger:has(input:checked)::after {
+    rotate: -45deg;
+    width: 40px;
+}
+
+label.hamburger input:checked {
+    opacity: 0;
+    width: 0;
+}
+
+/* fine delle linee che compongono il menù a comparsa */
+
+/* aggiunta della funzione a scomparsa delle voci di menùe decorazione */
+
+aside.sidebar {
+    transition: translate var(--animation-timing);
+    translate: -100%;
+    position: absolute;
+    align-content: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    opacity: 0.9;
+    font-weight: bolder;
+    width: 20rem;
+    height: 60vh;
+    max-height: 100vh;
+    border: 5px solid #ff7429;
+    border-radius: 30px;
+}
+
+label.hamburger:has(input:checked) + .sidebar {
+    translate: 0;
+}
+
+aside.sidebar div {
+    padding: 14%;
+    border: 2px #ff7429;
+    border-radius: 20px;
+    margin: 20px 10px;
+    cursor: pointer;
+}
+
+aside.sidebar div a {
+    text-decoration: none;
+    color: #ff7429;
+    padding: 14%;
+}
+
+aside.sidebar div:hover {
+    border: 2px solid #ff7429;
+    background-color: #ff7429;
+    box-shadow: inset 0px 0px 4px 4px#fc8f54;
+    transition: var(--animation-timing);
+    margin: 20px 10px;
+    a {
+        color: white;
+    }
+}
+
+header{
+    display: flex;
+}
+
+div.logo img{
+    width: 300px;
+}
+
+div.logo {
+    top: 0px;
+    width: 100%;
+    text-align: center;
+    margin-right: 40px;
+}
+
+/* Fine Header */
+
+/* inizio main */
+
+main {
+    margin: 50px;
+}
+
+div.intro h1 {
+    font-size: 100px;
+    color: #1e201e;
+    text-align: center;
+    margin: 50px 0;
+}
+
+div.intro p {
+    font-size: 30px;
+    color: #1e201e;
+    text-align: center;
+    margin-bottom: 100px;
+    margin-top: 0;
+}
+
+div.intro p br {
+    display: block;
+    content: "";
+    margin: 30px 0;
+}
+
+div.esplora {
+    background-color: #fc8f54;
+    padding: 10px;
+    box-shadow: inset 0 0 4px 4px #ff7429 ;
+    margin: 5%;
+    border-radius: 30px;
+}
+
+div.esplora h2 {
+    text-align: center;
+    font-size: 80px;
+    color: white;
+    flex-direction: column;
+}
+
+/* Box esplora i progetti */
+
+div.progetti {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 70px;
+}
+
+/* figma */
+
+div.figma {
+    background-color: aliceblue;
+    height: 350px;
+    width: 250px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+div.figma h4 {
+    font-size: 45px;
+    margin: 10px 0 10px 0;
+}
+
+div.figma img {
+    height: 150px;
+    width: 150px;
+}
+
+div.figma hr {
+    content: "";
+    margin: 8px 25px 25px 25px;
+    height: 2px;
+    background-color: #ff7429;
+}
+
+div.figma a {
+    text-decoration: none;
+    color: white;
+    background-color: #ff7429;
+    font-size: 30px;
+    padding: 5px 35px;
+    border-radius: 10px;
+    box-shadow: #fc8f54 inset 0 0 5px 5px;
+}
+
+div.figma a:hover {
+    color: #ff7429;
+    box-shadow: 0 0 5px 5px inset #ff7429;
+    background-color: white;
+    transition: 200ms ease-in;
+}
+
+/* progetto html */
+
+div.html {
+    background-color: aliceblue;
+    height: 350px;
+    width: 250px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+div.html h4 {
+    font-size: 45px;
+    margin: 10px 0 10px 0;
+}
+
+div.html img {
+    height: 150px;
+    width: 150px;
+}
+
+div.html hr {
+    content: "";
+    margin: 8px 25px 25px 25px;
+    height: 2px;
+    background-color: #ff7429;
+}
+
+div.html a {
+    text-decoration: none;
+    color: white;
+    background-color: #ff7429;
+    font-size: 30px;
+    padding: 5px 35px;
+    border-radius: 10px;
+    box-shadow: #fc8f54 inset 0 0 5px 5px;
+}
+
+div.html a:hover {
+    color: #ff7429;
+    box-shadow: 0 0 5px 5px inset #ff7429;
+    background-color: white;
+    transition: 200ms ease-in;
+}
+
+/* progetto html+css */
+
+div.html-css {
+    background-color: aliceblue;
+    height: 350px;
+    width: 250px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+div.html-css h4 {
+    font-size: 45px;
+    margin: 10px 0 25px 0;
+}
+
+div.html-css img {
+    height: 100px;
+    width: 100px;
+}
+
+div.html-css hr {
+    content: "";
+    margin: 30px 25px 40px 25px;
+    height: 2px;
+    background-color: #ff7429;
+}
+
+div.html-css a {
+    text-decoration: none;
+    color: white;
+    background-color: #ff7429;
+    font-size: 30px;
+    padding: 5px 35px;
+    border-radius: 10px;
+    box-shadow: #fc8f54 inset 0 0 5px 5px;
+}
+
+div.html-css a:hover {
+    color: #ff7429;
+    box-shadow: 0 0 5px 5px inset #ff7429;
+    background-color: white;
+    transition: 200ms ease-in;
+}
+
+
+
+/* fine main */
+
+/* inizio footer */
+
+footer {
+    background-color: #FFB26F;
+}
+
+footer  {
+    display: flex;
+    justify-content: space-around;
+}
+
+footer address.social p {
+    text-align: center;
+    font-size: 25px;
+    color: #1A1A19;
+}
+
+footer address.social a {
+    text-decoration: none;
+}
+
+footer address.social a img {
+    height: 50px;
+    width: 50px;
+    padding: 30px;
+}
+
+footer div.copyright p {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 25px;
+    color: #1A1A19;
+}
+
+footer div.copyright ul li {
+    list-style: none;
+    text-align: center;
+}
+
+footer div.copyright ul li a {
+    text-decoration: none;
+    color: #1A1A19;
+    font-size: 22px;
+}
+
+footer div.copyright ul li a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+footer div.copyright ul li a:active {
+    color: #605678;
+}
+
+/* fine css sito per desktop pc */
+
+/* aggiunta tag per desktop di smartphone e tablet */
+
+@media screen and (max-width: 700px) {
+    
+    /* menu */
+
+    aside.sidebar {
+        height: 90%;
+        width: 80%;
+        font-size: 15px;
+    }
+
+    /* titoli e testi */
+
+    div.intro h1 {
+        font-size: 60px;
+    }
+
+    div.intro p {
+        font-size: 20px;
+    }
+
+    div.esplora h2 {
+        font-size: 50px;
+    }
+
+    /* sezione esplora i progetti */
+
+    main {
+        margin: 20px;
+    }
+
+    div.esplora {
+        margin: 0;
+    }
+
+    div.progetti {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    div.progetti div {
+        margin: 30px;
+    }
+
+    /* footer */
+
+    footer{
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer address {
+        text-align: center;
+    }
+
+    footer div {
+        text-align: center;
+    }
+
+    footer ul {
+        padding: 0;
+    }
+
+}
+
+/* ottimizzazione per tablet e desktop piccoli */
+
+@media screen and (min-width: 700px) and (max-width: 1350px) {
+    
+    aside.sidebar {
+        height: 90%;
+        width: 30%;
+        font-size: 15px;
+    }
+}
+@media screen and (min-width: 700px) and (max-width: 1100px) {
+
+    /* menu */
+
+    /* sezione esplora i progetti */
+
+    div.progetti {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    div.progetti div {
+        margin: 30px;
+    }
+    
+    /* footer */
+
+    @media screen and (max-width:760px) {
+
+        footer{
+            display: flex;
+            flex-direction: column;
+        }
+
+        footer address {
+            text-align: center;
+        }
+
+        footer div {
+            text-align: center;
+        }
+        footer ul {
+            padding: 0;
+        }    
+    }
+}
+

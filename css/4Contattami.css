@@ -1,0 +1,459 @@
+@font-face {
+    font-family: nunito;
+    src: url(../font/Nunito.ttf);
+}
+
+* {
+    font-family: nunito;
+}
+
+body {
+    margin: 0;
+    background-color: rgb(254, 243, 226, 0.6) ;
+}
+
+:root {
+    --bar-width: 50px;
+    --bar-height: 8px;
+    --hamburger-gap: 6px;
+    --foreground: #ff7429;
+    --background: white;
+    --hamburger-margin: 10px;
+    --animation-timing: 200ms ease-in-out;
+}
+
+/* fine regole generali */
+
+/* inizio header */
+
+/* hamburger menu */
+
+label.hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: var(--hamburger-gap);
+    margin: var(--hamburger-margin);
+    width: max-content;
+    z-index: 2;
+    cursor: pointer;
+}
+
+label.hamburger:has(input:checked) {
+    --background: rgba(255, 255, 255, 0.9);
+    --foreground: #ff7429;
+}
+
+label.hamburger::before,
+label.hamburger::after {
+    content:""
+}
+
+label.hamburger::before,
+label.hamburger::after,
+label.hamburger input {
+    width: var(--bar-width);
+    height: var(--bar-height);
+    background-color: var(--foreground);
+    border-radius: 5px;
+    transition: opacity var(--animation-timing), 
+    width var(--animation-timing), 
+    rotate var(--animation-timing),
+    translate var(--animation-timing);
+    transform-origin: left center;
+}
+
+label.hamburger input {
+    appearance: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    pointer-events: none;
+}
+
+label.hamburger:has(input:checked)::before {
+    rotate: 45deg;
+    width: 40px;
+}
+
+label.hamburger:has(input:checked)::after {
+    rotate: -45deg;
+    width: 40px;
+}
+
+label.hamburger input:checked {
+    opacity: 0;
+    width: 0;
+}
+
+/* fine delle linee che compongono il menù a comparsa */
+
+/* aggiunta della funzione a scomparsa delle voci di menùe decorazione */
+
+aside.sidebar {
+    transition: translate var(--animation-timing);
+    translate: -100%;
+    position: absolute;
+    align-content: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    opacity: 0.9;
+    font-weight: bolder;
+    width: 20rem;
+    height: 60vh;
+    max-height: 100vh;
+    border: 5px solid #ff7429;
+    border-radius: 30px;
+}
+
+label.hamburger:has(input:checked) + .sidebar {
+    translate: 0;
+}
+
+aside.sidebar div {
+    padding: 14%;
+    border: 2px #ff7429;
+    border-radius: 20px;
+    margin: 20px 10px;
+    cursor: pointer;
+}
+
+aside.sidebar div a {
+    text-decoration: none;
+    color: #ff7429;
+    padding: 14%;
+}
+
+aside.sidebar div:hover {
+    border: 2px solid #ff7429;
+    background-color: #ff7429;
+    box-shadow: inset 0px 0px 4px 4px#fc8f54;
+    transition: var(--animation-timing);
+    margin: 20px 10px;
+    a {
+        color: white;
+    }
+}
+
+header{
+    display: flex;
+}
+
+div.logo img{
+    width: 300px;
+}
+
+div.logo {
+    top: 0px;
+    width: 100%;
+    text-align: center;
+    margin-right: 40px;
+}
+
+/* Fine Header */
+
+/* inizio main */
+
+/* inizio section form */
+
+section.form {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    box-shadow: inset 0 0 4px 4px #ff7429 ;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 9%;
+    margin-bottom: 9%;
+    border-radius: 30px;
+    background-color: #fc8f54;
+    gap: 10px;
+}
+
+section.form div.maps {
+    width: 50%;
+}
+
+section.form div.maps iframe {
+    object-fit: fill;
+    width: 100%;
+    border-radius: 30px;
+    height: 100%;
+}
+
+section.form div.caffe {
+    height: 100%;
+    width: 50%;
+}
+
+section.form div.caffe h2 {
+    font-size: 60px;
+    text-align: center;
+    color: #ffffff;
+}
+
+section.form div.caffe h4 {
+    font-size: 40px;
+    text-align: center;
+    color: #ffffff;
+}
+
+section.form div.caffe p {
+    font-size: 30px;
+    text-align: center;
+    color: #ffffff;
+}
+
+div.caffe form {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+div.caffe label {
+    font-size: 20px;
+    color: #ffffff;
+}
+
+div.caffe input {
+    width: 100%;
+    height: 40px;
+    font-size: 17px;
+    border: 3px solid #fafafa;
+    box-shadow: inset 0 0 2px 2px #ffffff;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+div.caffe input[type=submit].submit {
+    background-color: #fc8f54;
+    color: white;
+    border: 4px solid white;
+    padding: 0;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+div.caffe input[type=submit].submit:hover {
+    background-color: white;
+    color: #ff7429;
+    border: 4px solid #ff7429;
+    box-shadow: inset 0 0 2px 2px  #fc8f54;
+}
+
+div.caffe select {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 17px;
+    border: 3px solid #fafafa;
+    box-shadow: inset 0 0 2px 2px #ffffff;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+textarea {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 150px;
+    font-size: 17px;
+    border: 3px solid #fafafa;
+    box-shadow: inset 0 0 2px 2px #ffffff;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+/* fine form */
+
+/* fine main */
+
+/* inizio footer */
+
+footer {
+    background-color: #FFB26F;
+}
+
+footer  {
+    display: flex;
+    justify-content: space-around;
+}
+
+footer address.social p {
+    text-align: center;
+    font-size: 25px;
+    color: #1A1A19;
+}
+
+footer address.social a {
+    text-decoration: none;
+}
+
+footer address.social a img {
+    height: 50px;
+    width: 50px;
+    padding: 30px;
+}
+
+footer div.copyright p {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 25px;
+    color: #1A1A19;
+}
+
+footer div.copyright ul li {
+    list-style: none;
+    text-align: center;
+}
+
+footer div.copyright ul li a {
+    text-decoration: none;
+    color: #1A1A19;
+    font-size: 22px;
+}
+
+footer div.copyright ul li a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+footer div.copyright ul li a:active {
+    color: #605678;
+}
+
+/* fine css sito per desktop pc */
+
+/* aggiunta tag per desktop di smartphone */
+
+@media screen and (min-width: 0) and (max-width: 700px) {
+    
+    /* ridimensionamento testo */
+
+    section.form div.caffe h2 {
+        font-size: 50px;
+    }
+
+    section.form div.caffe h4 {
+        font-size: 30px;
+    }
+
+    section.form div.caffe p {
+        font-size: 20px;
+    }
+
+    
+    /* form */
+
+    div.maps {
+        display: none;
+    }
+
+    section.form {
+        padding: 20px;
+    }
+
+    section.form div.caffe {
+        width: 100%;
+    }
+
+    section.form div.caffe h2,
+    h4, p {
+        margin:  20px 0;
+    }
+
+    section.form div.caffe form {
+        width: 90%;
+        text-align: left;
+    }
+
+    /* footer */
+
+    /* footer */
+
+    footer{
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer address {
+        text-align: center;
+    }
+
+    footer div {
+        text-align: center;
+    }
+
+    footer ul {
+        padding: 0;
+    }
+
+}
+
+/* ottimizzazione per tablet e desktop piccoli */
+
+@media screen and (min-width: 700px) and (max-width: 1350px) {
+    
+    /* menu */
+
+    aside.sidebar {
+        height: 90%;
+        width: 30%;
+        font-size: 15px;
+    }
+
+    /* form */
+
+    div.maps {
+        align-self: center;
+        margin-top: 50px;
+    }
+    
+    section.form {
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    section.form div.caffe {
+        width: 100%;
+    }
+
+    section.form div.caffe h2,
+    h4, p {
+        padding: 0 10%;
+        margin:  20px 0;
+    }
+
+    section.form div.caffe form {
+        width: 70%;
+        text-align: left;
+    }
+
+    /* footer */
+
+    @media screen and (max-width:760px) {
+
+        footer{
+            display: flex;
+            flex-direction: column;
+        }
+
+        footer address {
+            text-align: center;
+        }
+
+        footer div {
+            text-align: center;
+        }
+
+        footer ul {
+            padding: 0;
+        }
+    
+    }
+
+}

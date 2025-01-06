@@ -1,0 +1,31 @@
+$template: dark; // normale - dark
+
+$background: rgb(254, 243, 226, 0.6);
+$backgroundDark: rgba(113, 113, 113, 0.6);
+$box: #fc8f54;
+$boxDark: #ffad72;
+$text: white;
+$textDark: black;
+
+
+@mixin box {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    box-shadow: inset 0 0 4px 4px #ff7429 ;
+    margin: 5%;
+    margin-top: 9%;
+    margin-bottom: 9%;
+    border-radius: 30px;
+}
+
+@mixin box2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    box-shadow: inset 0 0 4px 4px #ff7429 ;
+    margin: 5%;
+    margin-top: 9%;
+    margin-bottom: 9%;
+    border-radius: 30px;
+}
